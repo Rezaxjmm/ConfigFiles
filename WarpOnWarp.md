@@ -4,14 +4,14 @@
 
 ## How to make it?
 
-### Android, Linux and Mac
+### Linux, Android and Mac OS
 
 1. Copy the [Config file](WoW/WarpOnWarp-HiddifyNext.json) to an editor.
 2. Run the below command in the termux(Android Shell), linux or mac to acquire best working IP/Ports of the Cloudflare Warp. After running select option 1.
 ```
 curl -sSL https://gitlab.com/rwkgyg/CFwarp/raw/main/point/endip.sh -o endip.sh && chmod +x endip.sh && ./endip.sh
 ```
-3. Replace the two IP/Ports of the copied config file (Step 1) with one of the resulted IP/Port of the step 2.
+3. Select one IP/Ports and replace it in config (in both IR and Main)
 4. Run the below instruction two times to acquire two free Warp accounts. Each time you run it, writes 3 lines including IPv6, private key and reserved bytes. You can replace the corresponding values of the copied config (Step 1) with these values.
 ```
 curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=never '"2606:4700:[0-9a-f:]+/128"|"private_key":"[0-9a-zA-Z\/+]+="|"reserved":\[[0-9]+(,[0-9]+){2}\]'
